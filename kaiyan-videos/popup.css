@@ -1,0 +1,149 @@
+body {
+  font: 1rem/1.5 'Microsoft YaHei', 'Droid Sans Fallback', SimHei, Arial, Helvetica, tahoma, sans-serif;
+  font-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  font-size: 100%;
+  width:240px
+}
+#status {
+  /* avoid an excessively wide status text */
+  white-space: pre;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 400px;
+}
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.video-list {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 6px;
+}
+
+.video-list .video-item{
+  width: 50%;
+  display: inline-block;
+  position: relative;
+  padding: 0 6px 24px;
+  vertical-align: top;
+}
+
+.video-content{
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.video-cover{
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 0;
+  padding-bottom: 63%;
+}
+
+.cover-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  /*opacity: 0;*/
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 5px;
+}
+/*.cover-img{
+background-position: 50%;
+background-size: cover;
+color: #fff;
+cursor: pointer;
+height: 450px;
+position: relative;
+}*/
+.cover-img .mask{
+  background: rgba(0,0,0,.4);
+  height: 100%;
+  position: absolute;
+  -webkit-transition: background .6s;
+  transition: background .6s;
+  width: 100%;
+  border-radius: 5px;
+}
+.cover-img:hover .mask {
+  background: transparent;
+}
+.video-loader * {
+  box-sizing: border-box;
+}
+
+.video-info{
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 5px;
+}
+.video-title{
+  width: 100%;
+  max-height: 36px;
+  line-height: 1.4;
+  overflow: hidden;
+  color: #444;
+  font-size: 13px;
+}
+
+.column-header{
+  display: block;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 12px;
+  outline: none;
+}
+.column-header .header-logo{
+  width: 20px;
+  height: 20px;
+  background-image: url(imgs/kaiyan.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: inline-block;
+  position: absolute;
+  top: 12px;
+  left: 0;
+}
+.column-header .left {
+  float: left;
+  color: #444;
+  font-size: 14px;
+  position: relative;
+  padding-left: 25px;
+}
+.column-header .right {
+  float: right;
+  font-size: 14px;
+  color: #999;
+  position: relative;
+  padding-right: 25px;
+}
+
+.hidden{
+  display: none;
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Chrome Screen Capture</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+      
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <link rel="stylesheet" href="popup.css">
+    <!--<script src="jquery.slim.js"></script>-->
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div class="video-loader loading hidden" v->
+      <a href="http://www.eyepetizer.net/" target="__blank" class="column-header">
+        <div class="left">
+          <span class="header-logo"></span>
+          <span>开眼视频</span>
+        </div>
+        <div class="right">
+          <span>查看更多</span>
+        </div>
+      </a>
+      <ul class="video-list" >
+        <li class="video-item">
+          <a class="video-content" v-href="coverUrl" target="__blank">
+            <div class="video-cover">
+              <div class="cover-img" v-style="coverImg" style="opacity: 1;background-image: url(http://img.kaiyanapp.com/f0c7f04abe64be16d453d7a31800fd20.jpeg?imageMogr2/quality/60/format/jpg)">
+                <div class="mask"></div>
+              </div>
+            </div>
+          </a>
+          <a class="video-info" v-href="coverUrl">
+            <div class="video-title" v-text="title">十个电影中的隐藏信息</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div id="status"></div>
+    <img id="image-result" class="" hidden>
+  </body>
+</html>
+
